@@ -23,3 +23,10 @@ In this project we should model Data Warehouse and split flat table based on rel
 
  ![Screenshot 2023-03-09 at 15 27 33](https://user-images.githubusercontent.com/65550422/224055726-90be2a5e-080a-49a4-b46d-91d7a8268fee.png)
 
+
+Now, We should do three things:
+- create calculation tables
+- create calculation columns
+- create measures
+
+
