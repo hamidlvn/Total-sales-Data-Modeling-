@@ -19,6 +19,7 @@ So, for start, We should split sales flat table to some resonable Tables and cre
  - Remove other columns
  - Remove duplicate
 
-In this project we should model Data Warehouse and split flat table based on related schema. We have to schema in Data Warehouse concept, Star and SnowFlake schema. Star and snowflake schema designs are mechanisms to separate facts and dimensions into separate tables. Snowflake schemas further separate the different levels of a hierarchy into separate tables. In either schema design, each table is related to another table with a primary key/foreign key relationship. Primary key/foreign key relationships are used in relational databases to define many-to-one relationships between tables [IBM].
+In this project we should model Data Warehouse and split flat table based on related schema. We have to schema in Data Warehouse concept, Star and SnowFlake schema. Star and snowflake schema designs are mechanisms to separate facts and dimensions into separate tables. Snowflake schemas further separate the different levels of a hierarchy into separate tables. In either schema design, each table is related to another table with a primary key/foreign key relationship. Primary key/foreign key relationships are used in relational databases to define many-to-one relationships between tables [IBM]. Below is the initial sample of the Data Warehouse model:
 
- 
+ ![Screenshot 2023-03-09 at 15 27 33](https://user-images.githubusercontent.com/65550422/224055726-90be2a5e-080a-49a4-b46d-91d7a8268fee.png)
+
