@@ -24,10 +24,23 @@ In this project we should model Data Warehouse and split flat table based on rel
  ![Screenshot 2023-03-09 at 15 27 33](https://user-images.githubusercontent.com/65550422/224055726-90be2a5e-080a-49a4-b46d-91d7a8268fee.png)
 
 
-Now, We should do three things:
+Now, We should do three things with DAX and M:
 - create calculation columns
 - create calculation tables
 - create measures
 
-## create calculation columns
+## create calculation columns with DAX and M
 
+In this step we create calculation columns like Delivery Duration, Not Delivered Duration with DAX in Power BI Environment and with M in Power query for showing how we can create these items.
+
+### DAX query:
+- Delivery Duration (PBI) = DATEDIFF(RELATED(Orders[Order Date]),'Order Details'[Delivery Date],DAY) 
+- Not Delivered Duration (PBI) = IF(ISBLANK('Order Details'[Delivery Date]),DATEDIFF(RELATED(Orders[Order Date]),TODAY(),DAY),BLANK())
+
+### M query:
+- Table.AddColumn(#"Removed Columns", "Not Delivered Duration", each if [Delivery Date] = null then [Not Delivered Duration 1] else null)
+- Table.AddColumn(#"Expanded Orders", "Delivery Duration", each [Delivery Date] - [Orders.Order Date])
+
+You should know more important than memorizing DAX or M is that you should learn how you can combinate these functions and where you should create columns, Power BI or Power query Environment?
+
+![Screenshot 2023-03-10 at 11 37 01](https://user-images.githubusercontent.com/65550422/224294521-84ebe375-432b-4e91-be6a-b8f0d1965b6d.png)
