@@ -41,7 +41,17 @@ In this step we create calculation columns like Delivery Duration, Not Delivered
 - Table.AddColumn(#"Removed Columns", "Not Delivered Duration", each if [Delivery Date] = null then [Not Delivered Duration 1] else null)
 - Table.AddColumn(#"Expanded Orders", "Delivery Duration", each [Delivery Date] - [Orders.Order Date])
 
-You should know more important than memorizing DAX or M is that you should learn how you can combinate these functions and where you should create columns, Power BI or Power query Environment?
+You should know more important than memorizing DAX or M functions is that you should learn how you can combinate these functions and where you should create columns, Power BI or Power query Environment?
 
 ![Screenshot 2023-03-10 at 11 37 01](https://user-images.githubusercontent.com/65550422/224296791-4c693edf-6146-4bf6-8772-d6b961b05839.png)
+
+## create calculation Tables with DAX and M
+
+In this step we want to create calculation tables. One of the most important calculation table is that Date Dimension. If we want to create relation between date of each table, we should create date dimension and connect it to each table has date and we want to get report based on date. DAX query is very useful for creating this table.
+ - at first we should select new table
+ - DateDT = CALENDAR(DATE(YEAR(MIN(Orders[Order Date])),MONTH(MIN(Orders[Order Date])),1),EOMONTH(MAX('Order Details'[Delivery Date]),0))
+
+Now, We should add this table to our model.
+
+![Screenshot 2023-03-10 at 14 28 57](https://user-images.githubusercontent.com/65550422/224328529-bd839d0d-0975-454a-a854-5106ff55a571.png)
 
