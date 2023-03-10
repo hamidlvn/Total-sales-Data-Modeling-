@@ -55,3 +55,4 @@ Now, We should add this table to our model.
 
 ![Screenshot 2023-03-10 at 14 28 57](https://user-images.githubusercontent.com/65550422/224328529-bd839d0d-0975-454a-a854-5106ff55a571.png)
 
+## create measures
