@@ -43,4 +43,5 @@ In this step we create calculation columns like Delivery Duration, Not Delivered
 
 You should know more important than memorizing DAX or M is that you should learn how you can combinate these functions and where you should create columns, Power BI or Power query Environment?
 
-![Screenshot 2023-03-10 at 11 37 01](https://user-images.githubusercontent.com/65550422/224294521-84ebe375-432b-4e91-be6a-b8f0d1965b6d.png)
+![Screenshot 2023-03-10 at 11 37 01](https://user-images.githubusercontent.com/65550422/224296791-4c693edf-6146-4bf6-8772-d6b961b05839.png)
+
