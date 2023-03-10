@@ -25,8 +25,9 @@ In this project we should model Data Warehouse and split flat table based on rel
 
 
 Now, We should do three things:
-- create calculation tables
 - create calculation columns
+- create calculation tables
 - create measures
 
+## create calculation columns
 
