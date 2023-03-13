@@ -57,3 +57,10 @@ Now, We should add this table to our model.
 
 ## create measures
 In this step we create some measure with DAX function. Power BI measures are the way of defining calculations in a DAX model, which helps us to calculate values based on each row. But rather, it gives us aggregate values from multiple rows from a table.
+
+
+
+
+Cumulative Values:
+![Screenshot 2023-03-13 at 23 24 21](https://user-images.githubusercontent.com/65550422/224846436-31d91165-aabc-412a-8973-067a659f2fa9.png)
+
