@@ -64,3 +64,49 @@ In this step we create some measure with DAX function. Power BI measures are the
 Cumulative Values:
 ![Screenshot 2023-03-13 at 23 24 21](https://user-images.githubusercontent.com/65550422/224846436-31d91165-aabc-412a-8973-067a659f2fa9.png)
 
+In this section, I will show you some measures and formula
+
+![Screenshot 2023-03-18 at 10 50 46](https://user-images.githubusercontent.com/65550422/226098644-e7f8f885-19bf-4efd-8ba1-4745820d9982.png)
+
+- Cost = CALCULATE(SUMX('Order Details','Order Details'[Quantity]*RELATED(Products[Unit Cost])),USERELATIONSHIP(Dates[Date],Orders[Order Date]))
+- Cost RT = CALCULATE('Cost Analysis'[Cost],FILTER(ALL(Dates),Dates[Date]<=MAX(Dates[Date])))
+- Cost YTD = TOTALYTD('Cost Analysis'[Cost],Dates[Date])
+- Profit = [Ordered Amount]-'Cost Analysis'[Cost]
+- Profit % = DIVIDE([Profit],[Ordered Amount])
+- Profit YTD = [Ordered Amount YTD]-'Cost Analysis'[Cost YTD]
+- AvgOrdersPerCustomer = AVERAGEX(Customers,[Net Sales Amount])
+- AvgOrdersPerItems = AVERAGEX('Order Details','Order Details'[Quantity]*RELATED(Products[Unit Price])*(1-RELATED(Promotions[Discount])))
+- CustomerBuyingMoreThanAverage Wrong = COUNTROWS(FILTER(Customers,[Net Sales Amount]>[AvgOrdersPerCustomer]))
+- Delivered Amount = CALCULATE('Sales Analysis'[Net Sales Amount],USERELATIONSHIP(Dates[Date],'Order Details'[Delivery Date]),'Order Details'[Delivery Date]<>BLANK())
+- Delivered Amount RT = CALCULATE([Delivered Amount],FILTER(ALL(Dates),Dates[Date]<=MAX(Orders[Order Date])))
+- Delivered Amount Total = CALCULATE([Delivered Amount],ALL('Order Details'))
+- Delivered Amount YTD = TOTALYTD([Delivered Amount],Dates[Date])
+- Delivery Duration = CALCULATE(AVERAGE('Order Details'[Delivery Duration]),USERELATIONSHIP(Dates[Date],'Order Details'[Delivery Date]))
+- Delivery Duration Max = CALCULATE(MAX('Order Details'[Delivery Duration]),ALL('Order Details'))
+- Delivery Duration Min = CALCULATE(MIN('Order Details'[Delivery Duration]),ALL('Order Details'))
+- Net Sales Amount = SUMX('Order Details','Order Details'[Quantity]*RELATED(Products[Unit Price])*(1-RELATED(Promotions[Discount])))
+- Not Delivered Amount = CALCULATE('Sales Analysis'[Net Sales Amount],USERELATIONSHIP(Dates[Date],Orders[Order Date]),'Order Details'[Delivery Date]=BLANK())
+- Ordered Amount = CALCULATE('Sales Analysis'[Net Sales Amount],USERELATIONSHIP(Dates[Date],Orders[Order Date]))
+- Ordered Amount % = DIVIDE([Ordered Amount],[Ordered Amount Total])
+- Ordered Amount Growth = DIVIDE([Ordered Amount]-'Sales Analysis'[Ordered Amount SPLY],'Sales Analysis'[Ordered Amount SPLY])
+- Ordered Amount MTD = TOTALMTD([Ordered Amount],Dates[Date])
+
+## Data visualization
+
+Data visualization brings data to life, making you the master storyteller of the insights hidden within your numbers. Through live data dashboards, interactive reports, charts, graphs, and other visual representations, data visualization helps users develop powerful business insight quickly and effectively. In this part, we'll demonstrate some visualization like chart, card, KPI,Donut chart, map and etc. As a power bi developer, you should know, which diagram and visualization share more sense about analysis business.
+
+![Screenshot 2023-03-18 at 11 10 59](https://user-images.githubusercontent.com/65550422/226099281-e5bb274d-479c-4ad8-8337-582347346a09.png)
+
+![Screenshot 2023-03-18 at 11 10 41](https://user-images.githubusercontent.com/65550422/226099284-1af087e2-373c-4bee-ae65-a975266b1a5e.png)
+
+![Screenshot 2023-03-18 at 11 10 33](https://user-images.githubusercontent.com/65550422/226099286-e851191f-986c-4371-a10b-f24ea6c3ecfa.png)
+
+![Screenshot 2023-03-18 at 11 10 24](https://user-images.githubusercontent.com/65550422/226099287-2bb7728b-d992-4815-addb-ec5a1ad00a83.png)
+
+![Screenshot 2023-03-18 at 11 10 16](https://user-images.githubusercontent.com/65550422/226099289-5059153a-8722-4e92-bab3-ec4515e5bfc1.png)
+
+![Screenshot 2023-03-18 at 10 50 46](https://user-images.githubusercontent.com/65550422/226099290-c46baf98-c51b-440f-ab38-06b4d6235218.png)
+
+![Screenshot 2023-03-18 at 11 09 52](https://user-images.githubusercontent.com/65550422/226099293-3557f5ca-3543-4ad8-9483-893db95beb82.png)
+
+
