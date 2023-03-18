@@ -95,6 +95,7 @@ In this section, I will show you some measures and formula
 
 Data visualization brings data to life, making you the master storyteller of the insights hidden within your numbers. Through live data dashboards, interactive reports, charts, graphs, and other visual representations, data visualization helps users develop powerful business insight quickly and effectively. In this part, we'll demonstrate some visualization like chart, card, KPI,Donut chart, map and etc. As a power bi developer, you should know, which diagram and visualization share more sense about analysis business.
 
+
 ![Screenshot 2023-03-18 at 11 10 59](https://user-images.githubusercontent.com/65550422/226099281-e5bb274d-479c-4ad8-8337-582347346a09.png)
 
 ![Screenshot 2023-03-18 at 11 10 41](https://user-images.githubusercontent.com/65550422/226099284-1af087e2-373c-4bee-ae65-a975266b1a5e.png)
@@ -105,8 +106,7 @@ Data visualization brings data to life, making you the master storyteller of the
 
 ![Screenshot 2023-03-18 at 11 10 16](https://user-images.githubusercontent.com/65550422/226099289-5059153a-8722-4e92-bab3-ec4515e5bfc1.png)
 
-![Screenshot 2023-03-18 at 10 50 46](https://user-images.githubusercontent.com/65550422/226099290-c46baf98-c51b-440f-ab38-06b4d6235218.png)
-
 ![Screenshot 2023-03-18 at 11 09 52](https://user-images.githubusercontent.com/65550422/226099293-3557f5ca-3543-4ad8-9483-893db95beb82.png)
 
 
+After visulization, We can share our reports to power bi service, power bi server and mobile format. In the another topic, I'll show, how we can share our report.
